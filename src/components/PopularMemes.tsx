@@ -8,7 +8,14 @@ const AllDiv=styled.div`
 
 const SingleMemeDiv=styled.div`
     display: flex;
+    flex-direction: column;
+    margin: auto;
 `;
+
+const ImgDiv=styled.img`
+    width: 50vw;
+    margin: auto;
+`
 
 
 export default function PopularMemes(props:{data:Memes[]}){
@@ -19,7 +26,7 @@ export default function PopularMemes(props:{data:Memes[]}){
                 props.data.map((meme:Memes) =>
                     <SingleMemeDiv key={meme.id}>
                         <h1>{meme.name}</h1>
-                        <img src={meme.url} alt={`image of ${meme.name}`}/>
+                        <ImgDiv src={meme.url} alt={`image of ${meme.name}`}/>
 
                     </SingleMemeDiv>
                 )
