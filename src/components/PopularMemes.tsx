@@ -17,6 +17,10 @@ const ImgDiv=styled.img`
     margin: auto;
 `
 
+const H1Div=styled.h1`
+    color: blue;
+`
+
 
 export default function PopularMemes(props:{data:Memes[]}){
     return(
@@ -25,7 +29,7 @@ export default function PopularMemes(props:{data:Memes[]}){
 
                 props.data.map((meme:Memes) =>
                     <SingleMemeDiv key={meme.id}>
-                        <h1>{meme.name}</h1>
+                        <H1Div>{meme.name}</H1Div>
                         <ImgDiv src={meme.url} alt={`image of ${meme.name}`}/>
 
                     </SingleMemeDiv>
